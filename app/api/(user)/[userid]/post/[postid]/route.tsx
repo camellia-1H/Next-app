@@ -7,8 +7,6 @@ export async function GET(
   { params }: { params: { userid: string; postid: string } }
 ) {
   try {
-    console.log(params.postid);
-
     const data = await db.post.findUnique({
       where: {
         id: params.postid,

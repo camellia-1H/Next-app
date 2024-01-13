@@ -22,7 +22,7 @@ export default async function Home() {
       console.log(error);
     }
   };
-  const data = await fetchAllUsers();
+  const data: Post[] = await fetchAllUsers();
 
   return (
     <div className="flex">
@@ -41,18 +41,6 @@ export default async function Home() {
           );
         })}
       </div>
-      {/* {userId ? (
-        <UserButton afterSignOutUrl="/" />
-      ) : (
-        <>
-          <Link href={"/sign-in"}>
-            <button>Sign In</button>
-          </Link>
-          <Link href={"/sign-up"}>
-            <button>Sign up</button>
-          </Link>
-        </>
-      )} */}
     </div>
   );
 }
